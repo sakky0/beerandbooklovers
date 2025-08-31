@@ -25,3 +25,10 @@
 .soon {
   font-size: 1.5em;
 }
+
+@media screen and (max-width: 500px) {
+  .logo {
+    height: 20vw;
+    padding: 3vw;
+  }
+}
