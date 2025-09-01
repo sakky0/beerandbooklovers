@@ -4,6 +4,8 @@
     --secondary-color: #a67c52; /* Gold trim */
     --background-color: #fdfaf6; /* Light parchment */
     --text-color: #2e2e2e; /* Rich black */
+
+    --fancy-border: 5px solid var(--secondary-color);
 }
 
 * {

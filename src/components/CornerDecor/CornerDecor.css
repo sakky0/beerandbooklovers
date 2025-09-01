@@ -1,0 +1,26 @@
+.corner-decor {
+    position: absolute;
+}
+
+.corner-decor.top-left {
+    top: 0;
+    left: 0;
+}
+
+.corner-decor.top-right {
+    top: 0;
+    right: 0;
+    transform: rotate(90deg);
+}
+
+.corner-decor.bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: rotate(270deg);
+}
+
+.corner-decor.bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
