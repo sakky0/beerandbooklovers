@@ -1,0 +1,20 @@
+header {
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    height: 100px;
+    width: 100vw;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+header h2 {
+    margin: 0 1rem 0 auto;
+    color: var(--accent-color);
+    font-size: 2rem;
+    text-shadow: 1px 1px 0 #000;
+}

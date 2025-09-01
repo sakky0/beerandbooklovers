@@ -1,0 +1,23 @@
+#bambi-nav {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 1rem;
+    left: 1rem;
+}
+
+#bambi-nav .logo {
+    height: 200px;
+    aspect-ratio: 1;
+}
+
+#bambi-nav .button {
+    position: absolute;
+    top: 35px;
+    left: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    height: 145px;
+    width: 145px;
+    cursor: pointer;
+}

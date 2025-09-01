@@ -1,63 +1,20 @@
 :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    --primary-color: #2e4e3f; /* Rich fancy green */
+    --accent-color: #d9c9a9; /* Warm parchment */
+    --secondary-color: #a67c52; /* Gold trim */
+    --background-color: #fdfaf6; /* Light parchment */
+    --text-color: #2e2e2e; /* Rich black */
 }
 
-a {
-    font-weight: 500;
-    color: #646cff;
-    text-decoration: inherit;
-}
-a:hover {
-    color: #535bf2;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    display: flex;
-    place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
-}
-
-svg {
-    color: rgba(255, 255, 255, 0.87);
-}
-
-h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
-    }
-    a:hover {
-        color: #747bff;
-    }
-    svg {
-        color: #213547;
-    }
-    button {
-        background-color: #f9f9f9;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    h1 {
-        font-size: 2.2em;
-        line-height: 1.1;
-    }
+    font-family: "Cinzel", serif;
+    background: url("paper-bg.jpg") repeat;
+    color: var(--text-color);
+    line-height: 1.6;
 }
