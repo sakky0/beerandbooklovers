@@ -2,16 +2,8 @@
 import { useState } from "react";
 import { CircleMenu, CircleMenuItem, TooltipPlacement } from "react-circular-menu";
 import { useNavigate } from "react-router";
-import LiteratureLogo from "../../assets/literature.svg?react";
-import ConstitutionLogo from "../../assets/constitution.svg?react";
-import AboutLogo from "../../assets/about.svg?react";
+import { navgationItems } from "../../helpers/navigationHelper";
 import "./BambiNavigation.css";
-
-const navItems = [
-    { name: "Literatura", icon: <LiteratureLogo />, link: "/" },
-    { name: "Statut", icon: <ConstitutionLogo />, link: "constitution" },
-    { name: "O klubu", icon: <AboutLogo />, link: "about" },
-];
 
 const BambiNavigation = () => {
     const [active, setActive] = useState(false);
@@ -43,7 +35,7 @@ const BambiNavigation = () => {
                 menuToggleElement={<div />}
                 onMenuToggle={closeMenuIfOpened}
             >
-                {navItems.map(i => (
+                {navgationItems.map(i => (
                     <CircleMenuItem
                         className="nav-item"
                         key={i.name}
