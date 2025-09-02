@@ -1,22 +1,29 @@
 /// <reference types="vite-plugin-svgr/client" />
 import { useState } from "react";
 import { CircleMenu, CircleMenuItem, TooltipPlacement } from "react-circular-menu";
+import { useNavigate } from "react-router";
 import LiteratureLogo from "../../assets/literature.svg?react";
 import ConstitutionLogo from "../../assets/constitution.svg?react";
 import AboutLogo from "../../assets/about.svg?react";
 import "./BambiNavigation.css";
 
 const navItems = [
-    { name: "Literatura", icon: <LiteratureLogo /> },
-    { name: "Statut", icon: <ConstitutionLogo /> },
-    { name: "O klubu", icon: <AboutLogo /> },
+    { name: "Literatura", icon: <LiteratureLogo />, link: "/" },
+    { name: "Statut", icon: <ConstitutionLogo />, link: "constitution" },
+    { name: "O klubu", icon: <AboutLogo />, link: "about" },
 ];
 
 const BambiNavigation = () => {
     const [active, setActive] = useState(false);
+    const navigate = useNavigate();
 
     const closeMenuIfOpened = () => {
         if (active) setActive(false);
+    };
+
+    const onNavClick = (link: string) => {
+        setActive(false);
+        navigate(link);
     };
 
     return (
@@ -33,7 +40,7 @@ const BambiNavigation = () => {
                 radius={8}
                 className="nav-trigger"
                 open={active}
-                menuToggleElement={<div/>}
+                menuToggleElement={<div />}
                 onMenuToggle={closeMenuIfOpened}
             >
                 {navItems.map(i => (
@@ -42,6 +49,7 @@ const BambiNavigation = () => {
                         key={i.name}
                         tooltip={i.name}
                         tooltipPlacement={TooltipPlacement.Right}
+                        onClick={() => onNavClick(i.link)}
                     >
                         {i.icon}
                     </CircleMenuItem>
