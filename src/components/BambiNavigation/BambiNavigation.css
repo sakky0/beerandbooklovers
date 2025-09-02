@@ -74,6 +74,11 @@
     background-color: var(--primary-color);
 }
 
+#bambi-nav .nav-trigger button svg {
+    width: 32px;
+    height: 32px;
+}
+
 @keyframes spinner {
     to {
         transform: rotate(360deg);
