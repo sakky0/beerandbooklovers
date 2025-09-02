@@ -9,15 +9,73 @@
 #bambi-nav .logo {
     height: 200px;
     aspect-ratio: 1;
+    z-index: 2;
+    position: relative;
 }
 
 #bambi-nav .button {
     position: absolute;
     top: 35px;
     left: 40px;
+    z-index: 101;
     border-radius: 50%;
     background-color: transparent;
     height: 145px;
     width: 145px;
     cursor: var(--fancy-cursor-pointer);
+}
+
+#bambi-nav .halo {
+    display: none;
+}
+
+#bambi-nav.active .halo {
+    display: block;
+    height: 260px;
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    left: -20px;
+    opacity: 60%;
+    animation: spinner 20s linear infinite;
+    user-select: none;
+}
+
+#bambi-nav.active .halo:last-of-type {
+    animation-direction: reverse;
+}
+
+#bambi-nav .nav-trigger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#bambi-nav .nav-trigger {
+    z-index: 2;
+}
+
+#bambi-nav.active .nav-trigger {
+    z-index: 102;
+}
+
+#bambi-nav.active .nav-trigger button {
+    cursor: var(--fancy-cursor-pointer);
+    background-color: rgb(255, 240, 230);
+    border: var(--fancy-border);
+    border-style: ridge;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    color: var(--text-color)
+}
+
+#bambi-nav.active .nav-trigger button:hover {
+    color: var(--accent-color);
+    background-color: var(--primary-color);
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
 }
