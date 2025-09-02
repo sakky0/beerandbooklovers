@@ -26,23 +26,23 @@
 }
 
 #bambi-nav .halo {
-    display: none;
-}
-
-#bambi-nav.active .halo {
-    display: block;
+    opacity: 0;
     height: 260px;
     position: absolute;
     z-index: 1;
     top: -20px;
     left: -20px;
-    opacity: 60%;
+    transition: opacity 1200ms ease-in;
     animation: spinner 20s linear infinite;
     user-select: none;
 }
 
-#bambi-nav.active .halo:last-of-type {
+#bambi-nav .halo:last-of-type {
     animation-direction: reverse;
+}
+
+#bambi-nav.active .halo {
+    opacity: 60%;
 }
 
 #bambi-nav .nav-trigger {
@@ -66,7 +66,7 @@
     border-style: ridge;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    color: var(--text-color)
+    color: var(--text-color);
 }
 
 #bambi-nav.active .nav-trigger button:hover {
