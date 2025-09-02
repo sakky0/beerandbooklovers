@@ -3,7 +3,12 @@
     border: var(--fancy-border);
     border-style: ridge;
     margin: 2rem auto;
-    padding: 2rem 4rem;
+    padding: 3.5rem;
     background-color: rgba(255, 240, 230, 0.6);
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.fancy-container .content {
+    position: relative;
+    z-index: 2;
 }

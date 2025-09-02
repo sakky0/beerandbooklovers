@@ -19,5 +19,5 @@
     background-color: transparent;
     height: 145px;
     width: 145px;
-    cursor: pointer;
+    cursor: var(--fancy-cursor-pointer);
 }

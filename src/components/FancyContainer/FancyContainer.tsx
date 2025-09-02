@@ -6,7 +6,7 @@ export type IFancyContainer = React.PropsWithChildren<React.HTMLAttributes<HTMLD
 const FancyContainer = ({ className, children, ...props }: IFancyContainer) => {
     return (
         <div className="fancy-container" {...props}>
-            {children}
+            <div className="content">{children}</div>
             <CornerDecor all></CornerDecor>
         </div>
     );

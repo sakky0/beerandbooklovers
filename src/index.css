@@ -6,6 +6,8 @@
     --text-color: #2e2e2e; /* Rich black */
 
     --fancy-border: 5px solid var(--secondary-color);
+    --fancy-cursor-normal: url(cursor-normal.png), auto;
+    --fancy-cursor-pointer: url(cursor-pointer.png), auto;
 }
 
 * {
@@ -19,4 +21,8 @@ body {
     background: url("paper-bg.jpg") repeat;
     color: var(--text-color);
     line-height: 1.6;
+}
+
+html, body {
+    cursor: var(--fancy-cursor-normal);
 }

@@ -16,7 +16,7 @@ const CornerDecor = ({
     topRight = false,
     bottomLeft = false,
     bottomRight = false,
-    size = 60,
+    size = 90,
 }: ICornerDecor) => {
     const positions = useMemo(() => {
         const classes = [];
