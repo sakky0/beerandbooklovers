@@ -21,6 +21,7 @@ const BambiNavigation = () => {
     return (
         <div id="bambi-nav" className={active ? "active" : undefined}>
             <img src="bambi-logo.png" alt="Bambi Logo" className="logo" />
+            <div className="border" />
             <div className="button" onClick={() => setActive(a => !a)} />
             <img src="halo.png" alt="Halo" className="halo" />
             <img src="halo.png" alt="Halo" className="halo" />

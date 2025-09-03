@@ -13,16 +13,25 @@
     position: relative;
 }
 
-#bambi-nav .button {
+#bambi-nav .button,
+#bambi-nav .border {
     position: absolute;
-    top: 35px;
-    left: 40px;
-    z-index: 101;
+    top: 44px;
+    left: 34px;
     border-radius: 50%;
     background-color: transparent;
-    height: 145px;
-    width: 145px;
+    height: 136px;
+    width: 154px;
+}
+
+#bambi-nav .button {
+    z-index: 101;
     cursor: var(--fancy-cursor-pointer);
+}
+
+#bambi-nav .border {
+    z-index: 1;
+    border: var(--fancy-border);
 }
 
 #bambi-nav .halo {
