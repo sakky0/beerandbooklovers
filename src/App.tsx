@@ -4,12 +4,13 @@ import Hero from "./components/Hero/Hero";
 import Literature from "./pages/Literature/Literature";
 import Constitution from "./pages/Constitution/Constitution";
 import About from "./pages/About/About";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import AppWrapper from "./components/AppWrapper/AppWrapper";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 const App = () => {
     return (
-        <Router>
+        <AppWrapper>
             <Header />
             <Hero />
             <main>
@@ -20,7 +21,7 @@ const App = () => {
                 </Routes>
             </main>
             <Footer />
-        </Router>
+        </AppWrapper>
     );
 };
 
