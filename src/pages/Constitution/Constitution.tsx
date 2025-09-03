@@ -20,7 +20,7 @@ const Constitution = () => {
 
             <h3>II. OSNIVAČI I UPRAVLJANJE KLUBOM</h3>
             <h4>Članak 3.</h4>
-            <p>
+            <p className="no-margin">
                 Klub su osnovala četiri člana (u daljnjem tekstu: Osnivači), koji imaju apsolutnu
                 upravlja ku moć nad Klubom. Osnivači su:
             </p>
