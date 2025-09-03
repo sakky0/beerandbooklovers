@@ -1,6 +1,8 @@
 #hero {
     position: relative;
-    background: url("/bookshelf.jpg") no-repeat center center/cover;
+    background: url("/bookshelf.jpg");
+    background-repeat: repeat;
+    background-size: contain;
     height: 250px;
     display: flex;
     align-items: center;
