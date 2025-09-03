@@ -32,7 +32,7 @@
     z-index: 1;
     top: -20px;
     left: -20px;
-    transition: opacity 1200ms ease-in;
+    transition: opacity 1s ease-in;
     animation: spinner 20s linear infinite;
     user-select: none;
 }
