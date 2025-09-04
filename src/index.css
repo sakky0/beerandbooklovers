@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Soulside;
-    src: url("/Soulside.otf") format("opentype");
+    font-family: Fenwick;
+    src: url("/Fenwick.ttf") format("truetype");
 }
 
 :root {
