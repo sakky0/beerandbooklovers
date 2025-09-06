@@ -20,10 +20,6 @@ const PageNavigation = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const closeMenuIfOpened = () => {
-        if (active) setActive(false);
-    };
-
     const onNavClick = (link: string) => {
         setActive(false);
         navigate(link);
