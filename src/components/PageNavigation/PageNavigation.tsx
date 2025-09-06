@@ -1,12 +1,23 @@
 /// <reference types="vite-plugin-svgr/client" />
-import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { CircleMenu, CircleMenuItem, TooltipPlacement } from "react-circular-menu";
-import { useNavigate } from "react-router";
 import { navgationItems } from "../../helpers/navigationHelper";
-import "./BambiNavigation.css";
+import { useState } from "react";
+import MenuLogo from "../../assets/menu.svg?react";
+import "./PageNavigation.css";
 
-const BambiNavigation = () => {
+const pageTitles = new Map();
+pageTitles.set("/literature", "Literatura");
+pageTitles.set("/constitution", "Statut");
+pageTitles.set("/about", "O klubu");
+
+const getTitle = (location: string) => {
+    return pageTitles.has(location) ? pageTitles.get(location) : "Literatura";
+};
+
+const PageNavigation = () => {
     const [active, setActive] = useState(false);
+    const location = useLocation();
     const navigate = useNavigate();
 
     const closeMenuIfOpened = () => {
@@ -19,37 +30,33 @@ const BambiNavigation = () => {
     };
 
     return (
-        <div id="bambi-nav" className={active ? "active" : undefined}>
-            <img src="bambi-logo.png" alt="Bambi Logo" className="logo" />
-            <div className="border" />
-            <div className="button" onClick={() => setActive(a => !a)} />
-            <img src="halo.png" alt="Halo" className="halo" />
-            <img src="halo.png" alt="Halo" className="halo" />
+        <nav id="page-indicator" className={active ? "active" : undefined}>
+            <h2>{getTitle(location.pathname)}</h2>
 
             <CircleMenu
-                startAngle={0}
-                rotationAngle={90}
+                startAngle={175}
+                rotationAngle={-95}
                 itemSize={2}
                 radius={8}
                 className="nav-trigger"
                 open={active}
-                menuToggleElement={<div />}
-                onMenuToggle={closeMenuIfOpened}
+                menuToggleElement={<MenuLogo className="nav-trigger" />}
+                onMenuToggle={setActive}
             >
                 {navgationItems.map(i => (
                     <CircleMenuItem
                         className="nav-item"
                         key={i.name}
                         tooltip={i.name}
-                        tooltipPlacement={TooltipPlacement.Right}
+                        tooltipPlacement={TooltipPlacement.Left}
                         onClick={() => onNavClick(i.link)}
                     >
                         {i.icon}
                     </CircleMenuItem>
                 ))}
             </CircleMenu>
-        </div>
+        </nav>
     );
 };
 
-export default BambiNavigation;
+export default PageNavigation;

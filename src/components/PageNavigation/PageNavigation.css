@@ -1,0 +1,53 @@
+#page-indicator {
+    margin-left: auto;
+    margin-right: 3rem;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#page-indicator h2 {
+    font-size: 2rem;
+    text-shadow: 1px 1px 0 #000;
+    text-align: center;
+}
+
+#page-indicator svg {
+    width: 32px;
+    height: 32px;
+}
+
+#page-indicator svg.nav-trigger {
+    cursor: var(--fancy-cursor-pointer);
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+#page-indicator button.nav-item {
+    cursor: var(--fancy-cursor-pointer);
+    background-color: rgb(255, 240, 230);
+    border: var(--fancy-border);
+    border-style: ridge;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+#page-indicator button.nav-item:hover {
+    color: var(--accent-color);
+    background-color: var(--primary-color);
+}
+
+#page-indicator ul {
+    position: relative;
+    transition: top linear 0.4s;
+    pointer-events: none;
+    top: -20px;
+}
+
+#page-indicator.active ul {
+    pointer-events: all;
+    top: 40px;
+}

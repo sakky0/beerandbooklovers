@@ -1,12 +1,12 @@
-import BambiNavigation from "../BambiNavigation/BambiNavigation";
-import PageIndicator from "../PageIndicator/PageIndicator";
+import BambiLogo from "../BambiLogo/BambiLogo";
+import PageNavigation from "../PageNavigation/PageNavigation";
 import "./Header.css";
 
 const Header = () => {
     return (
         <header>
-            <BambiNavigation />
-            <PageIndicator />
+            <BambiLogo />
+            <PageNavigation />
         </header>
     );
 };
