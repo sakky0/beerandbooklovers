@@ -26,11 +26,16 @@ body {
     background: url("/paper-bg.jpg") repeat;
     color: var(--text-color);
     line-height: 1.6;
+    scrollbar-gutter: stable both-edges;
 }
 
 html,
 body {
     cursor: var(--fancy-cursor-normal);
+}
+
+main {
+    min-height: calc(100vh - 431px);
 }
 
 main p {
