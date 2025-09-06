@@ -1,13 +1,22 @@
+import { useMemo } from "react";
+import classNames from "classnames";
 import CornerDecor from "../CornerDecor/CornerDecor";
 import "./FancyContainer.css";
 
-export type IFancyContainer = React.PropsWithChildren<React.HTMLAttributes<HTMLDivElement>>;
+export type IFancyContainer = React.PropsWithChildren<React.HTMLAttributes<HTMLDivElement>> & {
+    incognito?: boolean;
+};
 
-const FancyContainer = ({ className, children, ...props }: IFancyContainer) => {
+const FancyContainer = ({ incognito, className, children, ...props }: IFancyContainer) => {
+    const newClassName = useMemo(
+        () => classNames(["fancy-container", className, { incognito: incognito }]),
+        [className]
+    );
+
     return (
-        <div className="fancy-container" {...props}>
+        <div className={newClassName} {...props}>
             <div className="content">{children}</div>
-            <CornerDecor all></CornerDecor>
+            {!incognito && <CornerDecor all></CornerDecor>}
         </div>
     );
 };

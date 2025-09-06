@@ -1,0 +1,15 @@
+.constitution-document .document-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.constitution-document .document-title {
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    font-size: 2rem;
+}
+
+.constitution-document .time-place {
+    text-align: end;
+}
