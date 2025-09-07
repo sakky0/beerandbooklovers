@@ -2,18 +2,25 @@ import type { Book } from "../../models/book";
 import { useMemo, useState } from "react";
 import { useBooks } from "../../services/dataService";
 import Separator from "../Separator/Separator";
+import Badge from "../Badge/Badge";
 import SwitchComponent from "../SwitchComponent/SwitchComponent";
+import StarLogo from "../../assets/star.svg?react";
 import classNames from "classnames";
 import "./BookList.css";
 
-type IBook = Book & { last?: boolean };
+type IBook = Book & { last?: boolean; active?: boolean };
 
-const Book = ({ cover, name, author, suggested, goodreads, read, last }: IBook) => {
+const Book = ({ cover, name, author, suggested, goodreads, read, last, active }: IBook) => {
     const className = classNames("book-container", { read });
 
     return (
         <>
             <div className={className}>
+                {active && (
+                    <Badge tooltipText="Trenutno aktualna knjiga">
+                        <StarLogo />
+                    </Badge>
+                )}
                 <img className="book-cover" src={cover} alt="book-cover-image" />
                 <div className="book-details">
                     <h4>{name}</h4>
@@ -36,6 +43,11 @@ const BookList = () => {
         return showRead ? books : books.filter(x => !x.read);
     }, [books, showRead]);
 
+    const activeBook = useMemo(() => {
+        if (!books || books.length === 0) return undefined;
+        return books.filter(x => !x.read)[0].name;
+    }, [books]);
+
     if (isLoading || !books || books.length === 0) return null;
 
     return (
@@ -50,7 +62,12 @@ const BookList = () => {
                 />
             </div>
             {displayBooks.map((x, i) => (
-                <Book key={i} last={i === displayBooks.length - 1} {...x} />
+                <Book
+                    key={i}
+                    last={i === displayBooks.length - 1}
+                    active={x.name === activeBook}
+                    {...x}
+                />
             ))}
         </div>
     );
