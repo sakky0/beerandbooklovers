@@ -1,0 +1,22 @@
+.seperator-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.seperator-container .seperator-line {
+    height: 1px;
+    background-color: #E9CA4F;
+    flex-grow: 1;
+}
+
+.seperator-container .seperator-decorator {
+    height: 26px;
+    width: auto;
+    margin: 0 -2px;
+}
+
+.seperator-container .seperator-decorator:first-of-type {
+    transform: rotate(180deg);
+}

@@ -1,10 +1,10 @@
+import Separator from "../../components/Separator/Separator";
 import FancyContainer from "../../components/FancyContainer/FancyContainer";
 import "./Literature.css";
 
 const Literature = () => {
     return (
         <FancyContainer>
-            {" "}
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis justo in
                 pharetra efficitur. Vivamus pulvinar dapibus accumsan. Integer tempus, ex fermentum
@@ -16,6 +16,7 @@ const Literature = () => {
                 nulla condimentum semper. Quisque gravida leo eu sem consectetur, sed malesuada leo
                 lobortis. Quisque commodo nisi eu ligula accumsan ullamcorper.
             </p>
+            <Separator />
             <p>
                 Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed non hendrerit
                 neque, a feugiat erat. Vivamus non sapien sodales tortor dignissim rutrum.
