@@ -6,6 +6,7 @@
 :root {
     --primary-color: #2e4e3f; /* Rich fancy green */
     --accent-color: #d9c9a9; /* Warm parchment */
+    --gold-color: #E9CA4F; /* Gold */
     --secondary-color: #a67c52; /* Gold trim */
     --background-color: #fdfaf6; /* Light parchment */
     --text-color: #2e2e2e; /* Rich black */
@@ -51,7 +52,7 @@ main h4 {
 
 main h3 {
     margin-bottom: 0.5rem;
-    border-bottom: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--gold-color);
     display: inline-block;
     font-size: 1.5rem;
 }

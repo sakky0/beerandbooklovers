@@ -11,11 +11,28 @@ const getData = async () => {
     return res.data as Data;
 };
 
-export const useConstitution = (options?: UseQueryOptions<LawDocument[]>) => {
+const useData = (options?: UseQueryOptions<Data>) => {
     return useQuery({
-        queryKey: ["constitution"],
-        queryFn: () => getData().then(d => d.constitution),
+        queryKey: ["data"],
+        queryFn: getData,
         ...options,
         staleTime: 1000 * 60 * FRESH_MINUTES,
     });
+};
+
+const usePartialData = <T>(
+    selector: (x: Data | undefined) => T,
+    options?: UseQueryOptions<Data>
+) => {
+    const queryData = useData(options);
+    const data = selector(queryData?.data);
+    return { ...queryData, data };
+};
+
+export const useConstitution = (options?: UseQueryOptions<Data>) => {
+    return usePartialData(x => x?.constitution, options);
+};
+
+export const useMembers = (options?: UseQueryOptions<Data>) => {
+    return usePartialData(x => x?.members, options);
 };

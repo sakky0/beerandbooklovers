@@ -1,0 +1,18 @@
+.member-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 1.5rem;
+}
+
+.member-container p {
+    margin: 0;
+}
+
+.member-container .member-image {
+    height: 120px;
+    width: 120px;
+    border: var(--fancy-border);
+    border-style: ridge;
+    border-radius: 50%;
+}
