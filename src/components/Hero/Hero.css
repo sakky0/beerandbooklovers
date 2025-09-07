@@ -34,3 +34,17 @@
     text-shadow: 3px 3px 3px #888;
     font-weight: normal;
 }
+
+@media (max-width: 768px) {
+    #hero {
+        margin-top: 70px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 220px;
+    }
+
+    #hero .hero-content h1 {
+        font-size: 4rem;
+        line-height: 3.5rem;
+    }
+}

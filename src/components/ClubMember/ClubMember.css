@@ -16,3 +16,18 @@
     border-style: ridge;
     border-radius: 50%;
 }
+
+@media (max-width: 768px) {
+    .member-container .member-image {
+        height: 80px;
+        width: 80px;
+    }
+
+    .member-container {
+        gap: 2rem;
+    }
+
+    .member-container h4 {
+        margin-top: 0;
+    }
+}

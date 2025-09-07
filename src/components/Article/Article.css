@@ -14,3 +14,9 @@
     text-align: end;
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .constitution-document .document-title {
+        font-size: 1.6rem;
+    }
+}

@@ -60,3 +60,38 @@
         transform: rotate(360deg);
     }
 }
+
+@media (max-width: 768px) {
+    #bambi-logo {
+        height: 100px;
+        width: 100px;
+        top: 0.5rem;
+        left: 0.5em;
+    }
+
+    #bambi-logo .logo {
+        height: 100px;
+    }
+
+    #bambi-logo .button,
+    #bambi-logo .border {
+        top: 19px;
+        left: 4px;
+        height: 73px;
+        width: 81px;
+    }
+
+    #bambi-logo .halo {
+        height: 130px;
+        top: -6px;
+        left: -22px;
+    }
+
+    #bambi-logo.hovered .halo {
+        opacity: 0;
+    }
+
+    #bambi-logo.active .halo {
+        opacity: 60%;
+    }
+}

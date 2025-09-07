@@ -10,3 +10,9 @@ header {
     align-items: center;
     border-bottom: var(--fancy-border);
 }
+
+@media (max-width: 768px) {
+    header {
+        height: 70px;
+    }
+}
