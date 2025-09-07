@@ -35,3 +35,7 @@ export const useConstitution = (options?: UseQueryOptions<Data>) => {
 export const useMembers = (options?: UseQueryOptions<Data>) => {
     return usePartialData(x => x?.members, options);
 };
+
+export const useBooks = (options?: UseQueryOptions<Data>) => {
+    return usePartialData(x => x?.books, options);
+};
