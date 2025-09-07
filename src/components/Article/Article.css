@@ -12,4 +12,5 @@
 
 .constitution-document .time-place {
     text-align: end;
+    text-decoration: underline;
 }
