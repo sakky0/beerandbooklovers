@@ -23,8 +23,9 @@ const MemberGroup = ({ members, name, lvl, last = false }: IMemberGroup) => (
             {members
                 .filter(x => x.lvl === lvl)
                 .sort(compareByLastName)
-                .map(x => (
+                .map((x, i) => (
                     <ClubMember
+                        key={i}
                         name={x.name}
                         lastName={x.lastName}
                         guid={x.guid}
