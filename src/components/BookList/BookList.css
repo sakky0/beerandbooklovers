@@ -51,6 +51,7 @@
 @media (max-width: 768px) {
     .booklist-container .booklist-title-container {
         align-items: center;
+        margin-left: 1rem;
     }
 
     .booklist-container .booklist-title-container h3 {
@@ -64,8 +65,6 @@
 
     .booklist-container .book-container {
         gap: 1.5rem;
-        margin-left: -0.5rem;
-        margin-right: -0.5rem;
     }
 
     .booklist-container .book-container .book-cover {

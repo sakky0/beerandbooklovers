@@ -11,6 +11,7 @@
 }
 
 .constitution-document .time-place {
+    margin-top: 1.5rem;
     text-align: end;
     text-decoration: underline;
 }
@@ -18,5 +19,9 @@
 @media (max-width: 768px) {
     .constitution-document .document-title {
         font-size: 1.6rem;
+    }
+
+    .constitution-document .time-place {
+        margin-right: 1rem;
     }
 }
