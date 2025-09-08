@@ -16,3 +16,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
 }
+
+.about-container p:first-of-type {
+    margin-top: 1rem;
+}

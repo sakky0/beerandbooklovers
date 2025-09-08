@@ -43,14 +43,32 @@ const About = () => {
     if (isLoading || !members || members.length === 0) return null;
 
     return (
-        <FancyContainer className="about-container">
-            <div className="about-title-container">
-                <h2 className="about-title">Članovi</h2>
-            </div>
-            <MemberGroup members={members} lvl="founder" name="OSNIVAČI" />
-            <MemberGroup members={members} lvl="honorary" name="POČASNI ČLANOVI" />
-            <MemberGroup last members={members} lvl="regular" name="OSTALI" />
-        </FancyContainer>
+        <>
+            <FancyContainer className="about-container">
+                <div className="about-title-container">
+                    <h2 className="about-title">O klubu</h2>
+                </div>
+                <p>
+                    Kao što je Eric Cantona jednom rekao, možeš promijenit svog partnera, politiku,
+                    religiju al nikad, baš nikad ne mijenjaš svoj klub. Osnivači Kluba Ljubitelja
+                    Pive & Knjige, vodili su se sličnim principom u svojoj želji da oforme zajednicu
+                    koja nadilazi hobi odnosno aktivnost uz koju samo prolazi vrijeme. Klub
+                    Ljubitelja Pive & Knjige stoga je mjesto pripadanja. Mjesto koje ne mijenjaš,
+                    već ga gradiš i oblikuješ s ostalim članovima. Kak? Pak, uz dobru kapljicu,
+                    originalnu ideju i mnoštvo rasprave.
+                </p>
+                <p>So, if you can think and drink, do consider to join!</p>
+            </FancyContainer>
+
+            <FancyContainer className="about-container">
+                <div className="about-title-container">
+                    <h2 className="about-title">Članovi</h2>
+                </div>
+                <MemberGroup members={members} lvl="founder" name="OSNIVAČI" />
+                <MemberGroup members={members} lvl="honorary" name="POČASNI ČLANOVI" />
+                <MemberGroup last members={members} lvl="regular" name="OSTALI" />
+            </FancyContainer>
+        </>
     );
 };
 
