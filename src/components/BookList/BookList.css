@@ -47,3 +47,33 @@
     height: 300px;
     aspect-ratio: 3 / 4;
 }
+
+@media (max-width: 768px) {
+    .booklist-container .booklist-title-container {
+        align-items: center;
+        margin-left: 1rem;
+    }
+
+    .booklist-container .booklist-title-container h3 {
+        font-size: 1.6rem;
+    }
+
+    .booklist-container .switch-component {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .booklist-container .book-container {
+        gap: 1.5rem;
+    }
+
+    .booklist-container .book-container .book-cover {
+        height: 150px;
+        aspect-ratio: 3 / 4;
+    }
+
+    .booklist-container .book-container h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+}

@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { CircleMenu, CircleMenuItem, TooltipPlacement } from "react-circular-menu";
 import { navgationItems } from "../../helpers/navigationHelper";
 import { useState } from "react";
+import { useIsMobile } from "../../helpers/dimensionHelper";
 import MenuLogo from "../../assets/menu.svg?react";
 import "./PageNavigation.css";
 
@@ -19,6 +20,7 @@ const PageNavigation = () => {
     const [active, setActive] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
+    const isMobile = useIsMobile();
 
     const onNavClick = (link: string) => {
         setActive(false);
@@ -33,7 +35,7 @@ const PageNavigation = () => {
                 startAngle={175}
                 rotationAngle={-95}
                 itemSize={2}
-                radius={8}
+                radius={isMobile ? 6 : 8}
                 className="nav-trigger"
                 open={active}
                 menuToggleElement={<MenuLogo className="nav-trigger" />}

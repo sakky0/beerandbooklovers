@@ -42,12 +42,29 @@
 
 #page-indicator ul {
     position: relative;
-    transition: top linear 0.4s;
+    transition: top linear 0.4s, right linear 0.4s;
     pointer-events: none;
     top: -20px;
+    right: 0px;
 }
 
 #page-indicator.active ul {
     pointer-events: all;
     top: 40px;
+}
+
+@media (max-width: 768px) {
+    #page-indicator {
+        margin-right: 0;
+        gap: 1rem;
+    }
+
+    #page-indicator.active ul {
+        top: 15px;
+        right: 20px;
+    }
+
+    #page-indicator h2 {
+        font-size: 1.6rem;
+    }
 }

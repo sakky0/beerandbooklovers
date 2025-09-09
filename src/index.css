@@ -68,3 +68,9 @@ main ul {
 .no-margin {
     margin: 0 !important;
 }
+
+@media (max-width: 768px) {
+    main h3 {
+        font-size: 1.2rem;
+    }
+}

@@ -26,3 +26,9 @@
     right: 0;
     transform: rotate(180deg);
 }
+
+@media (max-width: 768px) {
+    .corner-decor {
+        margin: 4px;
+    }
+}

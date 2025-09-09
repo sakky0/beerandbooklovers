@@ -1,6 +1,8 @@
 import type { Book } from "../../models/book";
 import { useMemo, useState } from "react";
 import { useBooks } from "../../services/dataService";
+import { useIsMobile } from "../../helpers/dimensionHelper";
+import { TooltipPlacement } from "react-circular-menu";
 import Separator from "../Separator/Separator";
 import Badge from "../Badge/Badge";
 import SwitchComponent from "../SwitchComponent/SwitchComponent";
@@ -12,12 +14,16 @@ type IBook = Book & { last?: boolean; active?: boolean };
 
 const Book = ({ cover, name, author, suggested, goodreads, read, last, active }: IBook) => {
     const className = classNames("book-container", { read });
+    const mobile = useIsMobile();
 
     return (
         <>
             <div className={className}>
                 {active && (
-                    <Badge tooltipText="Trenutno aktualna knjiga">
+                    <Badge
+                        tooltipText="Trenutno aktualna knjiga"
+                        tooltipPlacement={mobile ? TooltipPlacement.Right : TooltipPlacement.Top}
+                    >
                         <StarLogo />
                     </Badge>
                 )}

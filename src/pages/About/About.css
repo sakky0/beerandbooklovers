@@ -13,10 +13,28 @@
 .about-container .members-container {
     margin: 1rem 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
 .about-container p:first-of-type {
     margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .about-container .about-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .about-container .members-container {
+        margin: 0.5rem 0;
+        grid-template-columns: 1fr;
+    }
+
+    .about-container .member-container {
+        justify-content: center;
+        gap: 3rem;
+    }
 }
