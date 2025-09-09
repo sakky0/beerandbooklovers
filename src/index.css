@@ -73,4 +73,8 @@ main ul {
     main h3 {
         font-size: 1.2rem;
     }
+
+    div[role="tooltip"] {
+        display: none;
+    }
 }
