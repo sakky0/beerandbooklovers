@@ -45,11 +45,11 @@ const About = () => {
     return (
         <FancyContainer className="about-container">
             <div className="about-title-container">
-                <h2 className="about-title">Članovi</h2>
+                <h2 className="about-title">A klub čine</h2>
             </div>
             <MemberGroup members={members} lvl="founder" name="OSNIVAČI" />
             <MemberGroup members={members} lvl="honorary" name="POČASNI ČLANOVI" />
-            <MemberGroup last members={members} lvl="regular" name="OSTALI" />
+            <MemberGroup last members={members} lvl="regular" name="ČLANOVI" />
         </FancyContainer>
     );
 };
