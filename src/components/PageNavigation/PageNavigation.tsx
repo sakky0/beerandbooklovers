@@ -5,6 +5,7 @@ import { navgationItems } from "../../helpers/navigationHelper";
 import { useState } from "react";
 import { useIsMobile } from "../../helpers/dimensionHelper";
 import MenuLogo from "../../assets/menu.svg?react";
+import classNames from "classnames";
 import "./PageNavigation.css";
 
 const pageTitles = new Map();
@@ -18,6 +19,7 @@ const getTitle = (location: string) => {
 
 const PageNavigation = () => {
     const [active, setActive] = useState(false);
+    const [animating, setAnimating] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
     const isMobile = useIsMobile();
@@ -27,8 +29,14 @@ const PageNavigation = () => {
         navigate(link);
     };
 
+    const onMenuToggle = (open: boolean) => {
+        setAnimating(true);
+        setTimeout(() => setAnimating(false), 400);
+        setActive(open);
+    }
+
     return (
-        <nav id="page-indicator" className={active ? "active" : undefined}>
+        <nav id="page-indicator" className={classNames({ active, animating })}>
             <h2>{getTitle(location.pathname)}</h2>
 
             <CircleMenu
@@ -39,7 +47,7 @@ const PageNavigation = () => {
                 className="nav-trigger"
                 open={active}
                 menuToggleElement={<MenuLogo className="nav-trigger" />}
-                onMenuToggle={setActive}
+                onMenuToggle={onMenuToggle}
             >
                 {navgationItems.map(i => (
                     <CircleMenuItem

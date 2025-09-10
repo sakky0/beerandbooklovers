@@ -53,6 +53,10 @@
     top: 40px;
 }
 
+#page-indicator.animating ul {
+    pointer-events: none;
+}
+
 @media (max-width: 768px) {
     #page-indicator {
         margin-right: 0;
