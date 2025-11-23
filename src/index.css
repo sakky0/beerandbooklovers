@@ -45,6 +45,7 @@ main p {
 
 main a {
     color: var(--primary-color);
+    cursor: var(--fancy-cursor-pointer);
 }
 
 main h2,

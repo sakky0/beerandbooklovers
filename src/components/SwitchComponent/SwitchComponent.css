@@ -11,6 +11,7 @@
     border-color: var(--secondary-color);
     position: relative;
     box-shadow: 0 2px 10px var(--black-a7);
+    cursor: var(--fancy-cursor-pointer);
 }
 
 .switch-thumb {
