@@ -14,3 +14,9 @@
     background-color: #f0d857;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.7);
 }
+
+@media (max-width: 768px) {
+    .yellow-cards-container .yellow-card {
+        height: 1.5rem;
+    }
+}
