@@ -9,6 +9,10 @@
     margin: 0;
 }
 
+.member-container .member-image-container {
+    position: relative;
+}
+
 .member-container .member-image {
     height: 120px;
     width: 120px;
@@ -23,11 +27,13 @@
         width: 80px;
     }
 
-    .member-container {
-        gap: 2rem;
-    }
-
     .member-container h4 {
         margin-top: 0;
+    }
+}
+
+@media (max-width: 580px) {
+    .member-container {
+        gap: 3rem;
     }
 }

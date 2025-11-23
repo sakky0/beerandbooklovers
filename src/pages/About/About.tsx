@@ -30,6 +30,7 @@ const MemberGroup = ({ members, name, lvl, last = false }: IMemberGroup) => (
                         lastName={x.lastName}
                         guid={x.guid}
                         joined={new Date(x.joined)}
+                        cards={x.cards}
                     />
                 ))}
         </div>

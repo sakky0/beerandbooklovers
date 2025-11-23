@@ -4,4 +4,5 @@ export type Member = {
     guid: string;
     lvl: "founder" | "honorary" | "regular";
     joined: string;
+    cards?: number;
 };

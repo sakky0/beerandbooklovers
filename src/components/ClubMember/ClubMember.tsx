@@ -1,4 +1,5 @@
 import type { Member } from "../../models/member";
+import YellowCards from "../YellowCards/YellowCards";
 import "./ClubMember.css";
 
 export type IClubMember = Omit<Member, "lvl" | "joined"> & {
@@ -13,10 +14,13 @@ const dateOptions: Intl.DateTimeFormatOptions = {
 
 const IMG_BASE = "https://aconto.fra1.digitaloceanspaces.com/images/1/";
 
-const ClubMember = ({ name, lastName, guid, joined }: IClubMember) => {
+const ClubMember = ({ name, lastName, guid, joined, cards }: IClubMember) => {
     return (
         <div className="member-container">
-            <img className="member-image" src={`${IMG_BASE}${guid}`} />
+            <div className="member-image-container">
+                <img className="member-image" src={`${IMG_BASE}${guid}`} />
+                <YellowCards cards={cards} />
+            </div>
             <div className="details">
                 <h4>
                     {name} {lastName}
